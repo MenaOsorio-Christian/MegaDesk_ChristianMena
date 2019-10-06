@@ -10,11 +10,24 @@ using System.Windows.Forms;
 
 namespace MegaDesk
 {
-    public partial class Form1 : Form
+    public partial class MegaDesk : Form
     {
-        public Form1()
+        public MegaDesk()
         {
             InitializeComponent();
+        }
+
+        private void addNewQuoteButton_Click(object sender, EventArgs e)
+        {
+            addNewQuote addNewQuote = new addNewQuote();
+            addNewQuote.Tag = this;
+            addNewQuote.Show(this);
+            this.Hide();
+        }
+
+        private void MegaDesk_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
